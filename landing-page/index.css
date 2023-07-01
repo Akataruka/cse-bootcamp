@@ -1,0 +1,252 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@300&family=Poppins&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+
+}
+
+#spotlight{
+    background-color: rgb(122, 59, 173);
+    position: absolute;
+    border-radius: 15em;
+    right:-15em;
+    top:-15em;
+    width: 40em;
+    height: 40em;
+    background: radial-gradient(rgb(142,91,199,0.44), rgb(42,27,58,0));
+    filter:blur(2em);
+}
+
+.navbar{
+    display:flex;
+    position:sticky;
+    z-index: 15;
+    flex-direction: row;
+    -ms-flex-align: center;
+    justify-content: right;
+}
+
+#logo {
+    position: absolute;
+    left: 1em;
+    margin: 1em 10px;
+    height: 6em;
+    border-radius: 10px;
+}
+#table{
+    display: inline-flex;
+    list-style: none;   
+}
+
+#table li{
+    margin: 1em;
+    padding: 1em;
+}
+
+
+#table li a{
+    
+    color: white;
+    font-size:1.3em;  
+    text-decoration: none;
+}
+
+
+#table li a:hover{
+    color: rgb(243, 7, 7);
+    font-size:1.3em;  
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.animation{
+    position: relative;
+    width: 40em;
+    height: 30em;
+    display: inline-block;
+}
+#img1{
+    z-index: 10;
+    height: 10em;
+    position: absolute;
+    top: 13em;
+    right:23em;
+    animation: 1.5s linear slider infinite ;
+}
+
+
+#img2{
+    
+    z-index: 8;
+    height: 20em;
+    position: absolute;
+    top: 8em;
+    right:3em;
+}
+#img3{
+    z-index: 7;
+    height: 12em;
+    position: absolute;
+    top: 3em;
+    right: 24em;
+    animation: 2s ease-in circle_animation infinite;
+}
+#img4{
+    z-index: 9;
+    height: 9em;
+    position: absolute;
+    top: 5em;
+    right: 12em;
+}
+
+#img5{
+    z-index: 9;
+    height: 13em;
+    position: absolute;
+    top: 3em;
+    right: 1em;
+    animation: 2s linear content_box_animation infinite;
+}
+
+#img6{
+    z-index:11;
+    height: 8em;
+    position: absolute;
+    top: 8em;
+    right: 0em;
+    animation: 2s linear curser_animation infinite;
+}
+
+#img7{
+    z-index:5;
+    height: 6em;
+    position: absolute;
+    top: 2em;
+    right: 19em;
+    animation: 2s linear heart_slider infinite;
+}
+
+@keyframes slider{
+    0%{
+        transform: translateY(0em) ;
+    }
+    30%{
+        transform: translateY(2em) ;
+    }
+    50%{
+        transform: translateY(2em) ; 
+    }
+    80%{
+        transform: translateY(0em) ;
+    }
+    100%{
+        transform: translateY(0em) ;
+    }
+}
+@keyframes circle_animation{
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+
+@keyframes content_box_animation{
+    0%{
+        transform: scale(0);
+    }
+
+    20%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes curser_animation{
+    0%{
+        transform: translateY(0em) ;
+    }
+    50%{
+        transform: translateY(2em) ; 
+    }
+    100%{
+        transform: translateY(0em) ;
+    }
+}
+
+@keyframes heart_slider{
+    0%{
+        transform: translateY(8em);
+    }
+    20%{
+        transform: translateY(0em);
+    }
+    90%{
+        transform: translateY(0em);
+    }
+    100%{
+        transform: translateY(8em);
+    }
+}
+
+
+.left{
+    margin:5em 10em;
+    border: 2px solid red;
+    width: 20em;
+    padding:2em;
+    top:20em;
+    left:3em;
+    display:flex;
+    flex-direction: column;
+
+}
+#cseimg{
+
+}
+.innerleft{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sign{ 
+    background: linear-gradient(90.2deg,#ff0c28,#7200ff);
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+    border-radius: 1.2em;
+    padding: 0.5em 1em;
+    border:2px solid rgb(142, 4, 4);
+}
+
+#sign:hover{
+    text-shadow: #FC0 0.5px 0 10px;
+    border:2px solid white;
+    cursor: pointer;
+    color:rgb(217, 238, 51);
+}
+

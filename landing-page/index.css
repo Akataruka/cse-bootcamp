@@ -214,17 +214,27 @@ body{
 
 .left{
     margin:5em 10em;
-    border: 2px solid red;
-    width: 20em;
+    /* background-color: #ff0c28; */
+    width: 25em;
     padding:2em;
     top:20em;
     left:3em;
     display:flex;
     flex-direction: column;
+    justify-content: left;
 
 }
 #cseimg{
-
+    position:relative;
+    top: -2em;
+    width: 25em;
+}
+#cseimg2{
+    width:25em;
+    position: absolute;
+    top: 38%;
+    left:18%;
+    z-index: 2;
 }
 .innerleft{
     display: flex;

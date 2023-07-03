@@ -25,8 +25,8 @@ body{
     border-radius: 15em;
     right:-15em;
     top:-15em;
-    width: 40em;
-    height: 40em;
+    width: 70vw;
+    height: 50vw;
     background: radial-gradient(rgb(142,91,199,0.44), rgb(42,27,58,0));
     filter:blur(2em);
 }
@@ -104,3 +104,23 @@ body{
     color:rgb(217, 238, 51);
 }
 
+@media only screen and (max-width: 600px){
+
+    .navbar{
+        display:flex;
+        position:sticky;
+        z-index: 15;
+        flex-direction: row;
+        -ms-flex-align: center;
+        justify-content:space-between;
+        width: 26em;
+    }
+    
+    #logo {
+        position: absolute;
+        left: 0.5em;
+        margin: 0.5em 0.3em;
+        height: 2.5em;
+        border-radius: 10px;
+    }
+}

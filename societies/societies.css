@@ -77,16 +77,6 @@ body{
     pointer-events: none;
 }
 
-
-#vid{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0em;
-    left: 0em;
-}
-
-
 .sign{ 
     background: linear-gradient(90.2deg,#ff0c28,#7200ff);
     color: white;
@@ -104,3 +94,15 @@ body{
     color:rgb(217, 238, 51);
 }
 
+.image{
+    width: 28em;
+    position: absolute;
+    right: 28em;
+}
+
+h1 {
+    font-size: 40px;
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

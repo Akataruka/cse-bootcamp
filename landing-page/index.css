@@ -231,7 +231,7 @@ body {
 
 
 .left {
-    margin: 5em 10em;
+    margin: 20em 0em 0em 8em;
     width: 25em;
     padding: 2em;
     top: 20em;
@@ -243,22 +243,27 @@ body {
 }
 
 #cseimg {
-    position: relative;
-    top: -2em;
+    position: absolute;
+    z-index: 2;
+    top: 10em;
     width: 25em;
 }
 
 #cseimg2 {
     width: 25em;
     position: absolute;
-    top: 38%;
-    left: 18%;
-    z-index: 2;
+    top:16em;
+    left:20em;
+    z-index: 3;
 }
 
 #para{
     color:white;
+    padding:0em 0em 1em 0em ;
+    text-align: center;
+    font-size: 1.8em;
 }
+
 .innerleft {
     display: flex;
     flex-direction: row;
@@ -267,6 +272,7 @@ body {
 }
 
 #sign {
+    z-index: 5;
     background: linear-gradient(90.2deg, #ff0c28, #7200ff);
     color: white;
     font-weight: bolder;

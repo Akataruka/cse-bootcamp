@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -6,29 +6,29 @@
 }
 
 
-body{
+body {
     background-color: rgb(6, 0, 20);
 }
 
-.navbar{
-    display:flex;
-    position:sticky;
+.navbar {
+    display: flex;
+    position: sticky;
     z-index: 15;
     flex-direction: row;
     -ms-flex-align: center;
     justify-content: right;
 }
 
-#spotlight{
+#spotlight {
     background-color: rgb(122, 59, 173);
     position: absolute;
     border-radius: 15em;
-    right:-15em;
-    top:-15em;
+    right: -15em;
+    top: -15em;
     width: 70vw;
     height: 50vw;
-    background: radial-gradient(rgb(142,91,199,0.44), rgb(42,27,58,0));
-    filter:blur(2em);
+    background: radial-gradient(rgb(142, 91, 199, 0.44), rgb(42, 27, 58, 0));
+    filter: blur(2em);
 }
 
 
@@ -39,46 +39,47 @@ body{
     height: 6em;
     border-radius: 1.5em;
 }
-#table{
+
+#table {
     display: inline-flex;
-    list-style: none;   
+    list-style: none;
 }
 
-#table li{
+#table li {
     margin: 1em;
     padding: 1em;
 }
 
 
-#table li a{
-    
+#table li a {
+
     color: white;
-    font-size:1.3em;  
+    font-size: 1.3em;
     text-decoration: none;
 }
 
 
-#table li a:hover{
+#table li a:hover {
     color: rgb(240, 236, 8);
-    font-size:1.3em;  
+    font-size: 1.3em;
 }
 
 .video_animation {
     position: relative;
-    top: 35vh; 
-    left: 50vw ; 
+    top: 35vh;
+    left: 50vw;
     z-index: 1;
     width: 100vw;
     height: 100em;
-    -webkit-mask-image: radial-gradient(50% 50% at 50% 50%,#fff 60.94%,transparent 100%);
+    -webkit-mask-image: radial-gradient(50% 50% at 50% 50%, #fff 60.94%, transparent 100%);
     opacity: 1;
-    transform: translate(-50%,-50%);
-    transition: .75s cubic-bezier(.6,.6,0,1) opacity;
+    transform: translate(-50%, -50%);
+    transition: .75s cubic-bezier(.6, .6, 0, 1) opacity;
     pointer-events: none;
 }
 
 
-#vid{
+#vid {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -87,35 +88,97 @@ body{
 }
 
 
-.sign{ 
-    background: linear-gradient(90.2deg,#ff0c28,#7200ff);
+.sign {
+    background: linear-gradient(90.2deg, #ff0c28, #7200ff);
     color: white;
     font-weight: bolder;
     /* font-size: 1.2em; */
     border-radius: 1.2em;
     /* padding: 0.5em 1em; */
-    border:2px solid rgb(142, 4, 4);
+    border: 2px solid rgb(142, 4, 4);
 }
 
-.sign:hover{
+.sign:hover {
     text-shadow: rgba(237, 192, 13, 0.888) 0.5px 0 10px;
-    border:2px solid white;
+    border: 2px solid white;
     cursor: pointer;
-    color:rgb(217, 238, 51);
+    color: rgb(217, 238, 51);
 }
 
-@media only screen and (max-width: 600px){
+.hamburger {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    margin: 1em 10px;
+    height: 8em;
+    border-radius: 10px;
+    display: none;
+}
 
-    .navbar{
-        display:flex;
-        position:sticky;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    #table {
+        position: fixed;
+        display: none;
+        top: 3rem;
+        flex-direction: column;
+        background-color: black;
+        width: 50%;
+        border-radius: 1em;
+        text-align: center;
+        /* justify-content: center; */
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    #table.active {
+        display: flex;
+    }
+
+    .items {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        display: flex;
+        position: sticky;
         z-index: 15;
         flex-direction: row;
         -ms-flex-align: center;
-        justify-content:space-between;
+        justify-content: space-between;
         width: 26em;
     }
-    
+
     #logo {
         position: absolute;
         left: 0.5em;
